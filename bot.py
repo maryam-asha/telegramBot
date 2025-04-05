@@ -68,7 +68,7 @@ def webhook():
 @app.route('/set_webhook', methods=['GET'])
 def set_webhook():
     """Set the webhook URL"""
-    webhook_url = f"https://your-app-name.onrender.com/{BOT_TOKEN}"  # Replace with your Render URL
+    webhook_url = f"https://telegrambot-pi2h.onrender.com/{BOT_TOKEN}"  # Replace with your Render URL
     success = application.bot.set_webhook(url=webhook_url)
     if success:
         return f"Webhook set to: {webhook_url}"
@@ -76,7 +76,7 @@ def set_webhook():
 
 if __name__ == '__main__':
     # Set the webhook when the app starts
-    webhook_url = f"https://your-app-name.onrender.com/{BOT_TOKEN}"  # Replace with your Render URL
+    webhook_url = f"https://telegrambot-pi2h.onrender.com/{BOT_TOKEN}"  # Replace with your Render URL
     application.bot.set_webhook(url=webhook_url)
 
     # Start the Flask app
